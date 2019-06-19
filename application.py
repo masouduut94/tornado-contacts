@@ -32,7 +32,13 @@ class Application(tornado.web.Application):
 
 class Contacts(tornado.web.RequestHandler):
     def get(self, input=None):
+<<<<<<< HEAD
     	print("MASTER BRANCH")
+=======
+    	print("HELLO CONTACTS")
+    	print("HELLO PYTHON")
+
+>>>>>>> test_branch
         # All Contacts / one Contact
         if input == None:
             # List all contact
