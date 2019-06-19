@@ -33,6 +33,7 @@ class Application(tornado.web.Application):
 class Contacts(tornado.web.RequestHandler):
     def get(self, input=None):
     	print("HELLO CONTACTS")
+    	print("HELLO PYTHON")
 
         # All Contacts / one Contact
         if input == None:
