@@ -1,4 +1,4 @@
-**A simple Tornado Application along with sqlalchemy and alembit.**
+# A simple Tornado Application along with sqlalchemy and alembit
 
 A web framework which simulates a simple API that stores contacts with some information about them.
 
