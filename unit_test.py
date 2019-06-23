@@ -5,8 +5,9 @@ from tornado import testing
 import re
 from sqlalchemy import func
 
-def check_json(json, pattern):
-    return bool(re.search(pattern, json.decode('utf-8')))
+
+def check_json(jsons, pattern):
+    return bool(re.search(pattern, jsons.decode('utf-8')))
 
 
 class TestContact(AsyncHTTPTestCase):
