@@ -43,7 +43,7 @@ message body : {contact_fname='Tom' , contact_lname='Hardy', contact_phone='4149
 
 3- limit for length of integer columns is 11 and for characters is 255.
 
-4- 'emails' must be unique.
+4- 'contact_email' must be unique.
 
 5- None of method specific params can be left empty.
 
