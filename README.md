@@ -1,30 +1,53 @@
 # A simple Tornado Application along with sqlalchemy and alembit
 
-A web framework which simulates a simple API that stores contacts with some information about them.
+A simple web framework which simulates an API that stores contacts with some information about them. there also exist different unit test cases for errors that has to be catched.
 
-You can use GET method for the address -> localhost:8000/contacts to get all contacts info in the list.
+## How to test framework methods
 
-You can add contact_id and use GET method like this: localhost:8000/contacts/2 to get specific contact info.
+** GET method **
 
-Use POST with all parameters (except for contact_id) to insert items
+1 : get all contacts info in the list.
+example ==> localhost:8000/contacts  | GET
 
-Use PUT with all parameters to UPDATE an existing contact.
+2 : get one contact info (mention contact_id)
+example ==> localhost:8000/contacts/1  | GET
 
-use DEL and send contact_id to DELETE contact.
+** POST method **
+
+1 : insert new contact in database.
+example ==> localhost:8000/contacts  | POST
+
+message body : {contact_fname='Tom' , contact_lname='Hardy', contact_phone='41498498', contact_adr= 'somewhere', contact_email='Tom_Hardy@gmail.com', contact_job='jobless', city_id='3'}
+
+** PUT method **
+
+1 : Update existing contact in DB
+example ==> localhost:8000/contacts  | POST
+
+message body : {contact_id='1', contact_fname='Tom' , contact_lname='Hardy', contact_phone='41498498', contact_adr= 'somewhere', contact_email='Tom_Hardy@gmail.com', contact_job='jobless', city_id='3'}
 
 
-Restrictions:
+** DEL method **
 
-Contact_id must be integer and there has to exist a contact with that id in database.
+1 : Delete a contact based on recieved contact_id
+example ==> localhost:8000/contacts  | POST
 
-City_id must be integer and there has to exist a city with that id in database (City table).
+message body : {contact_fname='Tom' , contact_lname='Hardy', contact_phone='41498498', contact_adr= 'somewhere', contact_email='Tom_Hardy@gmail.com', contact_job='jobless', city_id='3'}
 
-limit for length of integer columns is 11 and for characters is 255.
-emails must be unique.
 
-None of inputs can be left empty.
+### Restrictions:
 
-{fname, lname, phone and job} inputs can't contain these character {!@#$%^&*()[]{}:;"/\\`-+=|'}
+1- 'Contact_id' must be integer and there has to exist a contact with that id in database.
+
+2- 'City_id' must be integer and there has to exist a city with that id in database (City table).
+
+3- limit for length of integer columns is 11 and for characters is 255.
+
+4- 'emails' must be unique.
+
+5- None of method specific params can be left empty.
+
+6- {fname, lname, phone and job} inputs can't contain these character {!@#$%^&*()[]{}:;"/\\`-+=|'}
 
 
 
