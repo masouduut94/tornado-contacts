@@ -4,7 +4,7 @@ A simple web framework which simulates an API that stores contacts with some inf
 
 ## How to test framework methods
 
-** GET method **
+**GET method**
 
 1 : get all contacts info in the list.
 example ==> localhost:8000/contacts  | GET
@@ -12,14 +12,14 @@ example ==> localhost:8000/contacts  | GET
 2 : get one contact info (mention contact_id)
 example ==> localhost:8000/contacts/1  | GET
 
-** POST method **
+**POST method**
 
 1 : insert new contact in database.
 example ==> localhost:8000/contacts  | POST
 
 message body : {contact_fname='Tom' , contact_lname='Hardy', contact_phone='41498498', contact_adr= 'somewhere', contact_email='Tom_Hardy@gmail.com', contact_job='jobless', city_id='3'}
 
-** PUT method **
+**PUT method**
 
 1 : Update existing contact in DB
 example ==> localhost:8000/contacts  | POST
@@ -27,7 +27,7 @@ example ==> localhost:8000/contacts  | POST
 message body : {contact_id='1', contact_fname='Tom' , contact_lname='Hardy', contact_phone='41498498', contact_adr= 'somewhere', contact_email='Tom_Hardy@gmail.com', contact_job='jobless', city_id='3'}
 
 
-** DEL method **
+**DEL method**
 
 1 : Delete a contact based on recieved contact_id
 example ==> localhost:8000/contacts  | POST
